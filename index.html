@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temprature converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-red-200 text-center">
+    <div
+      class="flex flex-col justify-center h-2/6 p-4 my-4 shadow shadow-lg rounded text-center w-11/12 md:w-6/12 mx-auto bg-gradient-to-r from-blue-400 to-blue-500"
+    >
+      <p class="text-4xl">Temprature Converter</p>
+    </div>
+
+    <label class="text-2xl" for="converter"
+      >Converter <span class="C text-2xl">°C</span> to
+      <span class="F text-2xl">°F</span></label
+    >
+
+    <div
+      class="bg-white mx-auto w-64 p-2 mt-10 shadow shadow-md w-3/6 md:w-3/12 rounded opacity-60"
+    >
+      <input
+        class="outline-0 focus:outline-0 w-full"
+        type="text"
+        id="converter"
+        placeholder="°C"
+      />
+    </div>
+    <!-- We show result here -->
+    <div class="mx-auto w-fit bg-black rounded rounded-lg">
+      <p class="result"></p>
+    </div>
+
+    <!-- We use these buttons -->
+    <div
+      id="buttons"
+      class="w-fit mx-auto flex md:flex-row flex-col justify-center text-center md: mt-4"
+    >
+      <div
+        class="shadow shadow-md w-20 bg-red-400 rounded rounded-lg p-1 m-1 mt-2 md:mt-1"
+      >
+        <button class="convertButton">Convert</button>
+      </div>
+      <div class="shadow shadow-md w-20 bg-red-400 rounded rounded-lg p-1 m-1">
+        <button class="resetButton">Reset</button>
+      </div>
+      <div class="shadow shadow-md w-20 bg-red-400 rounded rounded-lg p-1 m-1">
+        <!-- <button class="changeButton">Change</button> -->
+        <select class="changeButton bg-red-400 focus:border-0">
+          <option value="C">C</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
